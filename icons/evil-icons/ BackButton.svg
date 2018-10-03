@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="21px" viewBox="0 0 12 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>ic / Navigation or Toolbar / BackButton</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="1.2.0---0-Driving-Schools---Details" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-344.000000, -33.000000)">
+        <g id="Group-2" transform="translate(205.000000, 21.000000)" fill="#7E57C2">
+            <g id="↳-Icon" transform="translate(131.000000, 8.000000)">
+                <g id="ic-/-Navigation-or-Toolbar-/-BackButton" transform="translate(8.000000, 4.000000)">
+                    <path d="M0.292151852,10.9458042 C-0.0973839508,10.5611888 -0.0973839508,9.93981019 0.292151852,9.5541958 L9.53713491,0.417332667 C10.0994648,-0.139110889 11.0143745,-0.139110889 11.5777032,0.417332667 C12.1400331,0.973776224 12.1400331,1.87687313 11.5777032,2.43331668 L3.66912762,10.2504995 L11.5777032,18.0656843 C12.1400331,18.6231269 12.1400331,19.5262238 11.5777032,20.0826673 C11.0143745,20.6391109 10.0994648,20.6391109 9.53713491,20.0826673 L0.292151852,10.9458042 Z" id="Chevron" transform="translate(6.000000, 10.250000) scale(-1, 1) translate(-6.000000, -10.250000) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

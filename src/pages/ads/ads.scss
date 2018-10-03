@@ -1,0 +1,70 @@
+page-ads {
+    ion-header{
+        height: 64px;
+    }
+    ion-navbar{
+        height: 100%;
+    }
+    
+    .toolbar-background {
+        background-image: url('../assets/pattern.svg');
+        background-repeat: repeat;
+        background-size: 30px;
+        background-color: #7E57C2;
+    }
+    ion-title{
+        -webkit-text-fill-color: white
+    }
+    #mainDiv{     
+        height: 240px;
+        width:100%;
+        background-color: white;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom:16px;
+        border: 2px solid #FFFFFF;
+        border-radius: 4px;
+    }
+    .graphicDiv, .graphicDiv img{
+        //border:1px solid blue;
+        height: 160px;
+        width: 100%
+    }
+    .listRow{
+        margin-top:5%;
+    }
+    
+    .downloadBtn{
+        
+        display: flex;
+        position: fixed;
+        bottom: 12%;
+        width: 90%;
+        margin: 0 1%;
+        height: 40px;
+    }
+
+    #firstCol{
+        background: #7E57C2;
+       // box-shadow: 0 1px 4px 0 rgba(126,87,194,0.50);
+        border-radius: 0 24.5px 24.5px 0 ;
+        border:3px solid white;
+        border-left: 0;
+    }
+    #secondCol{
+        background: #7E57C2;
+       // box-shadow: 0 1px 4px 0 rgba(126,87,194,0.50), inset -1px 0 0 0 #FFFFFF;
+        border-radius: 24.5px 0 0 24.5px;
+        border:3px solid white
+
+    }
+    #colBtn{
+        height: 100%;
+        width: 100%;
+        color: white;
+        margin: 0;
+        font-size: medium;
+        font-weight: bold;
+    }
+    
+}

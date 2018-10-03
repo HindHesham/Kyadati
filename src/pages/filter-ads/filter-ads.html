@@ -1,0 +1,108 @@
+<!--
+  Generated template for the FilterAdsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-border class="headerShadow">
+    
+    <ion-navbar hideBackButton="true">
+      <ion-title>  خيارات البحث </ion-title> 
+        <ion-buttons start>
+          <button (click)="close()" style="background:transparent">
+            <custom-icon set="evil" name="close" color="white" style="font-size:2em"></custom-icon> 
+          </button>
+        </ion-buttons> 
+      </ion-navbar>
+  </ion-header>
+
+
+<ion-content >
+  <ion-list no-padding >
+    <ion-row id="listRow">
+      <ion-list>
+        <ion-item style="padding-top:24px">
+              <ion-label color="primary" stacked>نوع السيارة</ion-label>
+              <ion-select [(ngModel)]="carType" [placeholder]="'BMW/Mercedes'">
+                <ion-option value="أوبل"> أوبل </ion-option>
+                <ion-option value="أودي"> أودي </ion-option>
+                <ion-option value="الفا روميو"> الفا روميو </ion-option>
+                <ion-option value=" بروتون"> بروتون </ion-option>
+                <ion-option value="بريليانس"> بريليانس</ion-option>
+                <ion-option value="بورش"> بورش</ion-option>
+                <ion-option value="بي ام دبليو"> بي ام دبليو</ion-option>
+                <ion-option value="بيجو"> بيجو</ion-option>
+                <ion-option value="تويوتا"> تويوتا</ion-option>
+                <ion-option value="جاكوار"> جاكوار</ion-option>
+                <ion-option value="جيب"> جيب</ion-option>
+                <ion-option value="جيلي"> جيلي</ion-option>
+                <ion-option value="دايهاتسو"> دايهاتسو</ion-option>
+                <ion-option value="دايو"> دايو</ion-option>
+                <ion-option value="رينو"> رينو</ion-option>
+                <ion-option value="سبرنزا"> سبرنزا</ion-option>
+                <ion-option value="سكودا"> سكودا</ion-option>
+                <ion-option value="سوبارو"> سوبارو</ion-option>
+                <ion-option value="سوزوكي"> سوزوكي</ion-option>
+                <ion-option value="سيات"> سيات</ion-option>
+                <ion-option value="سيتروين"> سيتروين</ion-option>
+                <ion-option value="شيفروليه"> شيفروليه</ion-option>
+                <ion-option value="فورد"> فورد</ion-option>
+                <ion-option value="فولفو"> فولفو</ion-option>
+                <ion-option value="فولكسفاغن"> فولكسفاغن</ion-option>
+                <ion-option value="فيات"> فيات</ion-option>
+                <ion-option value="كرايسلر"> كرايسلر</ion-option>
+                <ion-option value="كيا"> كيا</ion-option>
+                <ion-option value="لادا"> لادا</ion-option>
+                <ion-option value="لاند روفر"> لاند روفر</ion-option>
+                <ion-option value="مازدا"> مازدا</ion-option>
+                <ion-option value="مرسيدس بنز"> مرسيدس بنز</ion-option>
+                <ion-option value="ميتسوبيشي"> ميتسوبيشي</ion-option>
+                <ion-option value="ميني كوبر"> ميني كوبر</ion-option>
+                <ion-option value="نيسان"> نيسان</ion-option>
+                <ion-option value="هامر"> هامر</ion-option>
+                <ion-option value="هوندا"> هوندا</ion-option>
+                <ion-option value="هيونداي"> هيونداي</ion-option>
+                <ion-option value="نوع اخر"> نوع اخر</ion-option>
+              </ion-select>
+        </ion-item>
+        <ion-item  style="padding-top:24px">
+              <ion-label color="primary" stacked> سنة الصنع</ion-label>
+              <ion-input type="number" placeholder="2008" [(ngModel)]="productionYear"></ion-input>
+        </ion-item>
+        <ion-item  style="padding-top:24px">
+              <ion-label color="primary" stacked> الأميال المقطوعة </ion-label>
+              <ion-input type="number" placeholder="12300 كيلو متر"  [(ngModel)]="kilometres"></ion-input>
+        </ion-item>
+        <ion-item  style="padding-top:24px">
+              <ion-label color="primary" stacked> سعة المحرك </ion-label>
+              <ion-input type="number" placeholder="3000 سي سي"  [(ngModel)]="engine"></ion-input>
+        </ion-item>
+        <ion-item style="padding-top:24px">
+              <ion-label color="primary" stacked>نوع الوقود </ion-label>
+              <ion-select [(ngModel)]="fuel" [placeholder]="'ممتاز/جيد جدا'">
+                  <ion-option value="ممتاز"> ممتاز </ion-option>
+                  <ion-option value="جيد جدا"> جيد جدا </ion-option>
+              </ion-select>
+        </ion-item>
+         
+        <div id="salleryMainDiv">
+                <ion-item>
+                    <ion-label color="primary" stacked>   السعر من </ion-label>
+                    <ion-input type="number" placeholder="  ريال سعودي 140.000 " no-margin [(ngModel)]="startPrice">  </ion-input>
+                </ion-item>
+                 <ion-item>
+                    <ion-label color="primary" stacked>  الي </ion-label>
+                    <ion-input type="number" placeholder="140,000 ريال سعودي" no-margin  [(ngModel)]="endPrice"></ion-input>
+                 </ion-item>
+        </div>        
+      </ion-list>
+    </ion-row>
+  </ion-list>
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <!--  <button ion-button color="primary" *ngIf="productionYear == null || kilometres == null || engine == null || startPrice == null || endPrice == null || carType == null || fuel == null" disabled>تأكيد</button>-->
+      <button ion-button color="primary" (click)="filter()">تأكيد</button>
+  </ion-toolbar>
+</ion-footer>

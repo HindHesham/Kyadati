@@ -1,0 +1,126 @@
+page-create-ads {
+    ion-icon{
+        color:white
+    }
+    .toolbar-background {
+        background-image: url('../assets/pattern.svg');
+        background-repeat: repeat;
+        background-size: 30px;
+        background-color: #7E57C2;
+        color: white;
+    }
+    ion-title{
+        -webkit-text-fill-color:white
+    }
+    ion-header{
+        height: 64px;
+    }
+    ion-navbar{
+        height: 100%;
+    }
+    ion-list{
+        margin-top: 16px;
+        font-weight: bold;
+    }
+    #adImgRow{
+        width: 100%;
+        height: 197px;
+        background-color: white;
+        margin-top:16px;
+        //for top and bottom border
+        box-shadow: 
+        inset 0px -1px 0px 0px rgba(0,0,0,0.06),
+        inset 0 1px 0 0 rgba(0,0,0,0.06);
+        padding: 16px;
+        margin-bottom: 38px
+    }
+    #mainImgDiv{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+    }
+    #titleImgRow{
+        height: 20px;
+        font-size: small;
+        font-weight: bold;
+        margin-bottom: 9px;
+    }
+    #hintImgRow{
+        height: 20px;
+        font-size: small;
+        font-weight: bold;
+        color: #B3B9BC;  
+        margin-bottom: 16px;  
+        opacity: 0.63;
+    }
+
+
+    #imgSlidDiv{
+        display: flex;
+        flex-direction: row;
+    }
+    #select{
+        background: #F7F7F7;
+        border: 1px dashed #979797;
+        border-radius: 4px;
+        width: 93px;
+        height: 93px;
+        display: flex;
+        justify-content: center
+    }
+    #select img{
+        width:90px
+    }
+    ion-slides{
+        height: 100px;
+    }
+    .slide-zoom{
+        height: 93px
+    }
+    .swiper-slide{
+        width: 93px;
+        height: 93px;
+    }
+    .swiper-slide img{
+        border-radius: 4px;
+        width: 93px;
+        height: 93px;
+    }
+  
+    #listRow{
+        //for top and bottom border
+        box-shadow: 
+        inset 0px -1px 0px 0px rgba(0,0,0,0.06),
+        inset 0 1px 0 0 rgba(0,0,0,0.06);
+        padding:16px;
+        background-color: white
+    }
+    ion-list{
+        width:100%;
+        font-weight: bold;
+    }
+    .list-header{
+        font-size: small;
+        font-weight: bold;
+        color:#37474F
+    }
+    .select .select-icon {
+        position: absolute;
+        width: 12px;
+        height: 19px;
+        left: 15px;
+        top:47px
+    }
+    ion-footer{
+        height: 65px
+    }
+    .button{
+        width: 90%;
+        margin: 10px 5% 0 5%;
+    }
+    
+
+}
+

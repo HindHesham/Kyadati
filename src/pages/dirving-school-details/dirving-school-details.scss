@@ -1,0 +1,70 @@
+page-dirving-school-details {
+    ion-header{
+        height: 206px;
+    }
+    .test{
+
+        background: transparent;
+        border: none !important;
+        font-size:0;
+    }
+    .toolbar-background {
+        background-image: url('../assets/pattern.svg');
+        background-repeat: repeat;
+        background-size: 30px;
+        background-color: #7E57C2;
+        color: white;
+    }
+    ion-scroll {
+        white-space: nowrap;
+         height: auto; // better to calculate the device height and set it offsetting the bottom StatusBar or margin, etc.
+
+    }
+    
+    ion-navbar{
+        margin-top: 0;
+        height: 100%;
+       // background-color: transparent;
+    }
+    
+    #iconRow{
+        height: 83px;
+        background-color: white;
+        color:#7E57C2;
+        font-weight: bold;
+        margin:0px 0 16px 0;
+        
+    }
+    custom-icon{
+        font-size: small
+    }
+    ion-col{
+        text-align: center
+    }
+    ion-buttons{
+        padding: 4px 4px 0 4px;
+    }
+    .button{
+        margin: 0 auto;
+    }
+    ion-icon{
+        color:#7E57C2;
+    }
+   #schoolLogoRow{
+       margin-top: 10px;
+   }
+    ion-row p{
+        padding: 0 16px;
+        color: #879195;
+        font-size: small
+    }
+    h4{
+        color: #37474F;
+    }
+    #commentRow{
+        display: flex;
+        flex-wrap: wrap;
+        //justify-content: space-between;
+        flex-direction: column;
+    }
+}

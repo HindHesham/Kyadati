@@ -1,0 +1,19 @@
+<ion-menu [content]="content" side="right" id="menu" type="overlay">
+    <ion-content>
+      <ion-list>
+        <div id="menuImgContainer">
+            <custom-icon  id="logoIcon" set="evil" name="drivingschools" color="white"></custom-icon>
+
+          <!--<img src="./assets/icon/logo.svg" width="64px" height="65.5" />-->
+          <div>قيادتي</div>
+        </div>
+        <button menuClose ion-item no-lines *ngFor="let p of pages" (click)="openPage(p)" class="menuBtn">
+            <custom-icon set="evil" [name]="p.icon" item-left color="primary"></custom-icon>
+          {{p.title}}
+        </button>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  
+  <!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+  <ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

@@ -1,0 +1,63 @@
+<!--
+  Generated template for the DrivingSchoolsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-border class="headerShadow">
+  <ion-navbar >
+    <button ion-button menuToggle>
+        <ion-icon name="menu" color="white"></ion-icon>
+    </button>
+    <ion-title >مدارس تعليم القيادة</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding >
+  <ion-list style="margin-top:2%">
+    <ion-row id="mapSelectionRow" >
+      <ion-item id="mapSelectionItem" class="shadowAndRadius" no-lines>
+        
+          <ion-select (ionChange)="cityChange($event)" placeholder="اختار المدينة" [(ngModel)]="selected">
+            <ion-option value="all">كل المدن </ion-option>
+            <ion-option *ngFor="let city of getAllCities()" value="{{city.name}}"> {{ city.name }} </ion-option>
+          </ion-select>
+        
+      </ion-item>
+    </ion-row>
+    <ion-row class="listRow">
+        <ion-list class="listSchools" no-lines *ngIf="selected === 'all'">
+
+          <div id="listSchoolDiv" class="shadowAndRadius" *ngFor="let schoolDrive of getAllDrivingSchool()">
+            <div id="imgDiv" (click)="gotoSchoolProfile(schoolDrive.id)">
+              <img *ngIf="schoolDrive.image" src="http://car.zodiacstudio.net{{schoolDrive.image}}" />
+              <img *ngIf="!schoolDrive.image" src="assets/imgs/avatar.png" />
+            </div>
+            <div id="ratinrDiv" class="patternimgAndColor">
+              <p (click)="gotoSchoolProfile()" style="margin-bottom:0">{{ schoolDrive.title }}</p>
+              <rating class="ratingClass" no-padding no-mrgin [(ngModel)]="schoolDrive.rate" readOnly="true" max="5" emptyStarIconName="star-outline" halfStarIconName="star-half" starIconName="star" nullable="false" (ngModelChange)="saveUserRating($event)"></rating>
+            </div>
+          </div> 
+          
+        </ion-list>
+
+        <ion-list class="listSchools" no-lines *ngIf="selected !== 'all'">
+
+          <div id="listSchoolDiv" class="shadowAndRadius" *ngFor="let schoolDrive of getAllFilteredDrivingSchool()">
+            <div id="imgDiv" (click)="gotoSchoolProfile(schoolDrive.id)">
+              <img *ngIf="schoolDrive.image" src="http://car.zodiacstudio.net{{schoolDrive.image}}" />
+              <img *ngIf="!schoolDrive.image" src="assets/imgs/avatar.png" />
+            </div>
+            <div id="ratinrDiv" class="patternimgAndColor">
+              <p (click)="gotoSchoolProfile()" style="margin-bottom:0">{{ schoolDrive.title }}</p>
+              <rating class="ratingClass" no-padding no-mrgin [(ngModel)]="schoolDrive.rate" readOnly="true" max="5" emptyStarIconName="star-outline" halfStarIconName="star-half" starIconName="star" nullable="false" (ngModelChange)="saveUserRating($event)"></rating>
+            </div>
+          </div> 
+          
+        </ion-list>
+
+    </ion-row>
+  </ion-list>
+</ion-content>
+

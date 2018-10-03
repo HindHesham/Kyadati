@@ -1,0 +1,37 @@
+page-inphographics-full-size {
+    ion-content{ 
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: inherit;
+        background-position: center;
+    }
+    .inphographicsDiv{
+        width: 100%;
+        height: 100%;
+    }
+    .closeBtn{
+       
+        display: flex;
+        position: absolute;
+        top: 2%;
+        left: 16px;  
+    }
+    .button{
+        border-radius: 25px;
+        min-width: 40px;
+        height: 40px
+    }
+    .button[icon-only]{
+        min-width: 40px;
+    }
+    .closeButtonBtn{
+        background-color: rgba(0,0,0,0.30);
+    }
+    .closeButtonBtn:active{
+        background-color: rgba(0,0,0,0.30);
+    }
+    .icon{
+        color:white
+    }
+
+}

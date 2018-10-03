@@ -1,0 +1,29 @@
+page-important-places {
+    ion-header{
+        height: 107px;
+    }
+    ion-navbar{
+        margin-top: 20px;
+        
+    }
+   
+    ion-grid{
+        height: 100%;
+        font-weight: bold;
+        color:#37474F;
+    }
+   
+    .listRow{
+        margin-top:16px;        
+    }
+    
+    #listSchoolDiv{
+        background-color: white;
+    }
+   
+    #ratinrDiv
+    {
+        height:62px;
+
+    }
+}

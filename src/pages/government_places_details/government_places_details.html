@@ -1,0 +1,41 @@
+
+<ion-header no-border class="headerShadow">
+  <ion-navbar >
+      <ion-buttons end disable>
+          <button style="background:transparent">
+              
+          </button>
+      </ion-buttons>
+    <ion-row id="schoolLogoRow">
+      <div class="logoSchool">
+        <img *ngIf="governmentPlaceObj.image" src="http://car.zodiacstudio.net{{governmentPlaceObj.image}}" />
+        <img *ngIf="!governmentPlaceObj.image" src="assets/imgs/avatar.png" />
+      </div>
+    </ion-row>
+    
+    <div style="text-align:center">
+     <p id="schoolName" > {{governmentPlaceObj.title}} </p>
+     <p id="schoolCountry"> {{governmentPlaceObj.city_name}}, {{governmentPlaceObj.area}} </p>
+    </div> 
+  </ion-navbar>
+   
+</ion-header>
+
+<ion-content padding>
+
+    <!-- important Places Government view-->
+    <ion-list>
+        <ion-row class="rowShadow" >
+          <p>
+            {{governmentPlaceObj.description}} 
+          </p>
+        </ion-row>
+   
+          <div id="map" #map>
+             
+          </div>
+  
+
+    </ion-list>
+
+</ion-content>

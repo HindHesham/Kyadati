@@ -1,0 +1,7 @@
+{
+  "name": "Kyadati",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

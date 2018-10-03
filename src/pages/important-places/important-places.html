@@ -1,0 +1,94 @@
+
+<ion-header class="headerShadow" no-border>
+
+  <ion-navbar color="white">
+    <button ion-button menuToggle>
+      <ion-icon name="menu" color="primary"></ion-icon>
+    </button>
+    <ion-title>أماكن تهمك</ion-title>
+  </ion-navbar>
+  <ion-toolbar color="white" no-border-bottom>
+    <ion-segment [(ngModel)]="placesType" >
+      <ion-segment-button value="اماكن حكوميه" (click)="status = 'اماكن حكوميه'">
+        اماكن حكوميه
+      </ion-segment-button>
+      <ion-segment-button value="اماكن صيانه"  (click)="status = 'اماكن صيانه'">
+        اماكن صيانه
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+    
+<ion-content padding class="outer-content">
+    <ion-list >
+      <ion-row id="mapSelectionRow" >
+        <ion-item id="mapSelectionItem" class="shadowAndRadius" no-lines>
+          <ion-select (ionChange)="cityChange($event)" placeholder="اختار المدينة" [(ngModel)]="selected">
+            <ion-option value="all">كل المدن </ion-option>
+            <ion-option *ngFor="let city of getAllCities()" value="{{city.name}}"> {{ city.name }} </ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-row>
+      <ion-row class="listRow">
+
+        <!-- اماكن حكوميه -->
+          <ion-list *ngIf="status === 'اماكن حكوميه' && selected === 'all'" class="listSchools" no-lines style="height:100% ">
+            
+            <div *ngFor="let governmentPlace of getAllGovernmentPlaces()" id="listSchoolDiv" style="height:212px" class="shadowAndRadius" (click)="gotoGovernmentPlaceDescription(governmentPlace.id)">
+              <div id="imgDiv" style="height:163px">
+                <img *ngIf="governmentPlace.image" src="http://car.zodiacstudio.net{{governmentPlace.image}}" />
+                <img *ngIf="!governmentPlace.image" src="assets/imgs/avatar.png" />
+              </div>
+              <div class="patternimgAndColor" id="ratinrDiv" style="height:44px">
+                  <p> {{ governmentPlace.title }} </p>
+              </div>
+            </div>
+
+          </ion-list>
+
+          <ion-list *ngIf="status === 'اماكن حكوميه' && selected !== 'all'" class="listSchools" no-lines style="height:100% ">
+            
+            <div *ngFor="let governmentPlace of getAllFilteredGovernmentPlaces()" id="listSchoolDiv" style="height:212px" class="shadowAndRadius" (click)="gotoGovernmentPlaceDescription(governmentPlace.id)">
+              <div id="imgDiv" style="height:163px">
+                <img *ngIf="governmentPlace.image" src="http://car.zodiacstudio.net{{governmentPlace.image}}" />
+                <img *ngIf="!governmentPlace.image" src="assets/imgs/avatar.png" />
+              </div>
+              <div class="patternimgAndColor" id="ratinrDiv" style="height:44px">
+                  <p> {{ governmentPlace.title }} </p>
+              </div>
+            </div>
+
+        </ion-list>
+
+        <!-- اماكن صيانه -->
+        <ion-list *ngIf="status === 'اماكن صيانه' && selected === 'all'" class="listSchools" no-lines >
+            <div *ngFor="let maintenanaceCenter of getAllMaintenanaceCenters()" id="listSchoolDiv" class="shadowAndRadius" (click)="maintenanaceCenterDescription(maintenanaceCenter.id)">
+              <div id="imgDiv">
+                <img *ngIf="maintenanaceCenter.image" src="http://car.zodiacstudio.net{{maintenanaceCenter.image}}" />
+                <img *ngIf="!maintenanaceCenter.image" src="assets/imgs/avatar.png" />
+              </div>
+              <div id="ratinrDiv" class="patternimgAndColor">
+                <p> {{ maintenanaceCenter.title }} </p>
+                <rating class="ratingClass" no-padding no-mrgin [(ngModel)]="maintenanaceCenter.rate" readOnly="false" max="5" emptyStarIconName="star-outline" halfStarIconName="star-half" starIconName="star" nullable="false" (ngModelChange)="saveUserRating($event)"></rating>    
+              </div>
+            </div>
+        </ion-list>
+
+        <ion-list *ngIf="status === 'اماكن صيانه' && selected !== 'all'" class="listSchools" no-lines >
+          
+          <div *ngFor="let maintenanaceCenter of  getAllFilteredMaintenanaceCenters()" id="listSchoolDiv" class="shadowAndRadius" (click)="maintenanaceCenterDescription(maintenanaceCenter.id)">
+            <div id="imgDiv">
+              <img *ngIf="maintenanaceCenter.image" src="http://car.zodiacstudio.net{{maintenanaceCenter.image}}" />
+              <img *ngIf="!maintenanaceCenter.image" src="assets/imgs/avatar.png" />
+            </div>
+            <div id="ratinrDiv" class="patternimgAndColor">
+              <p> {{ maintenanaceCenter.title }} </p>
+              <rating class="ratingClass" no-padding no-mrgin [(ngModel)]="maintenanaceCenter.rate" readOnly="false" max="5" emptyStarIconName="star-outline" halfStarIconName="star-half" starIconName="star" nullable="false" (ngModelChange)="saveUserRating($event)"></rating>    
+            </div>
+          </div>
+
+      </ion-list>
+
+      </ion-row>
+    </ion-list>
+  </ion-content>

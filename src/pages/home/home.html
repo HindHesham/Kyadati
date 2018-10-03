@@ -1,0 +1,159 @@
+
+
+<ion-content class="outer-content">
+    <ion-list>
+      <ion-row id="categoriesRow" >
+  
+        <div id="div1">
+          <img src="assets/icon/Categories/1.png" />
+        </div>
+        <div id="div2">
+          <img src="assets/icon/Categories/2.png" />
+        </div>
+        
+        <div id="div3">
+          <img src="assets/icon/Categories/3.png" />
+        </div>
+        
+        <div id="div4">
+          <img src="assets/icon/Categories/4.png" />
+        </div>
+        
+        <div id="div5">
+          <img src="assets/icon/Categories/5.png" />
+        </div>
+        
+        <div id="div6">
+          <img src="assets/icon/Categories/6.png" />
+        </div>
+        
+        <div id="div7">
+          <img src="assets/icon/Categories/7.svg" />
+        </div>
+      
+      </ion-row>
+  
+      <!-- اعلانااات -->
+      <ion-row class="SecTitleRow patternimgAndColor">
+        <div id="secTitle">
+          إعلانات مميزة
+        </div>
+      </ion-row>
+      <ion-row class="adsSecRow" padding>
+          <ion-list class="listSchools" no-lines>
+            <div id="adsDiv" class="shadowAndRadius" *ngFor="let ad of getAllAds()" (click)="gotoAdsProfile(ad.id)">
+              <div id="imgDiv" >
+                <img *ngIf="ad.first_image" src="http://car.zodiacstudio.net/{{ad.first_image}}" />
+                <img *ngIf="!ad.first_image" src="assets/imgs/avatar.png" />
+              </div>
+              <div id="ratinrDiv" class="patternimgAndColor">
+                <p> {{ad.title}} </p>
+                <p id="adsPrice" style="margin:0">السعر: <span>{{ad.price}}</span></p>
+              </div>
+            </div> 
+  
+          </ion-list> 
+      </ion-row>
+  
+      <!-- مدارس القياده -->
+    
+      <ion-row class="SecTitleRow patternimgAndColor">
+        <div id="secTitle">
+          مدارس تعليم القيادة الاكثر تقييماً
+        </div>
+      </ion-row>
+      <ion-row class="adsSecRow" padding>
+        <ion-list class="listSchools" no-lines>
+          <div id="listSchoolHomeDiv" class="shadowAndRadius" *ngFor="let drivingSchool of getAllDrivingSchool()" (click)="gotoSchoolProfile(drivingSchool.id)">
+              <div id="imgDiv" >
+                <img *ngIf="drivingSchool.image" src="http://car.zodiacstudio.net{{drivingSchool.image}}" />
+                <img *ngIf="!drivingSchool.image" src="assets/imgs/avatar.png" />            
+              </div>
+              <div id="ratinrDiv" class="patternimgAndColor">
+                <p>{{drivingSchool.title}} </p>
+                <rating class="ratingClass" no-padding no-mrgin [(ngModel)]="drivingSchool.rate" readOnly="true" max="5" emptyStarIconName="star-outline" halfStarIconName="star-half" starIconName="star" nullable="false" ></rating>
+              </div>
+            
+          </div> 
+
+        </ion-list>
+      </ion-row>
+    
+      <!-- انفودرافيك -->
+      
+      <ion-row class="SecTitleRow patternimgAndColor">
+        <div id="secTitle">
+            إنفوجرافيك
+        </div>
+      </ion-row>
+      <ion-row class="adsSecRow" padding>
+          <ion-list class="listSchools" no-lines>
+            <div id="inphogtraficHYomeDiv" class="shadowAndRadius" *ngFor="let image of getAllImages()" (click)="gotoFullSize(image.path, 'image')">
+              <div id="imgDiv">
+                <img src="http://car.zodiacstudio.net{{image.path}}" />
+              </div>
+              <div id="ratinrDiv" class="patternimgAndColor">
+                <p>{{image.title}}</p>
+              </div>
+            </div> 
+
+          </ion-list>
+      </ion-row>
+    
+        <!-- فيديوهات -->
+        
+        <ion-row class="SecTitleRow patternimgAndColor">
+            <div id="secTitle">
+                فيديوهات
+            </div>
+        </ion-row>
+        <ion-row class="adsSecRow" padding>
+              <ion-list class="listSchools" no-lines>
+  
+                <div id="inphogtraficHYomeDiv" class="shadowAndRadius" *ngFor="let video of getAllVideos()" (click)="showVideo(video.path)">
+                  <div id="imgDiv" >
+                    <img src="{{video.poster}}" />
+                  </div>
+                  <div id="ratinrDiv" class="patternimgAndColor">
+                    <p> {{video.title}} </p>
+                  </div>
+                </div>
+              </ion-list>
+        </ion-row>
+    
+  
+        <!-- اماكن تهمك -->
+        
+        <ion-row class="SecTitleRow patternimgAndColor">
+            <div id="secTitle">
+                اماكن تهمك
+            </div>
+        </ion-row>
+        <ion-row class="adsSecRow" padding>
+              <ion-list class="listSchools" no-lines>
+                
+                <div id="inphogtraficHYomeDiv" class="shadowAndRadius" *ngFor="let governmentPlace of getAllGovernmentPlaces()" (click)="gotoGovernmentPlaceDescription(governmentPlace.id)">
+                  <div id="imgDiv" >
+                    <img *ngIf="governmentPlace.img" src="http://car.zodiacstudio.net{{governmentPlace.img}}" />
+                    <img *ngIf="!governmentPlace.img" src="assets/imgs/avatar.png" />                  
+                  </div>
+                  <div id="ratinrDiv" class="patternimgAndColor">
+                    <p> {{ governmentPlace.title }} </p>
+                  </div>
+                </div> 
+
+                <div id="inphogtraficHYomeDiv" class="shadowAndRadius"  *ngFor="let maintenanaceCenter of getAllMaintenanaceCenters()" (click)="maintenanaceCenterDescription(maintenanaceCenter.id)">
+                  <div id="imgDiv" >
+                    <img *ngIf="maintenanaceCenter.img" src="http://car.zodiacstudio.net{{maintenanaceCenter.img}}" />
+                    <img *ngIf="!maintenanaceCenter.img" src="assets/imgs/avatar.png" />
+                  </div>
+                  <div id="ratinrDiv" class="patternimgAndColor">
+                    <p>{{ maintenanaceCenter.title }}</p>
+                  </div>
+                </div> 
+
+              </ion-list>
+        </ion-row>
+
+    </ion-list>
+  </ion-content>

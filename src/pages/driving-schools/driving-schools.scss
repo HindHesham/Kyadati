@@ -1,0 +1,34 @@
+page-driving-schools {
+    
+    .listRow{
+        margin-top:16px;        
+    }
+    ion-header{
+        height: 64px;
+    }
+    ion-navbar{
+        height: 100%;
+    }
+     
+    ion-title{
+         font-size: medium;
+         font-weight: bold;
+         -webkit-text-fill-color: white;
+         
+    }
+    .toolbar-title{
+        font-size: medium;
+    }
+    .toolbar-background {
+        background-image: url('../assets/pattern.svg');
+        background-repeat: repeat;
+        background-size: 30px;
+        background-color: #7E57C2;
+        color: white;
+    }
+    #ratinrDiv
+    {
+        height:62px;
+
+    }
+}

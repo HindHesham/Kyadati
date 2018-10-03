@@ -1,0 +1,59 @@
+<!--
+  Generated template for the SignUpPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-border class="headerShadow">
+    <ion-navbar>
+      <ion-title>قيادتي</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="outer-content" >
+  <form [formGroup]="registerForm"> 
+    <ion-list >
+       <ion-list-header no-lines>
+         أدخل البيانات الخاصه بك
+            <h5 >لا تقلق، لن يتم عرضهم علنا</h5>
+        </ion-list-header>
+        <ion-row>
+           
+                <ion-item no-lines>
+                    <ion-input type="text" autofocus placeholder=" الإسم" [(ngModel)]="username" #userName formControlName="usernameFormName" ></ion-input>
+                </ion-item>
+        
+        </ion-row>
+        <ion-row >
+          <ion-col>
+            <ion-item no-lines>
+                  <ion-input type="tel" placeholder="رقم الهاتف" [(ngModel)]="phoneNum" #phoneInput formControlName="phone"></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item no-lines>
+                <ion-input type="tel" autofocus placeholder="+699" [(ngModel)]="codeNum" #codeInput formControlName="code"></ion-input>            
+            </ion-item>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+         
+            <ion-item no-lines style="margin-top:5%; text-align:left">
+                  <ion-input type="text" placeholder=" البريد الالكترونى" [(ngModel)]="emailText" #emailInput formControlName="email"></ion-input>
+            </ion-item>
+
+        </ion-row>
+
+
+        <p class="errorMsg" *ngIf="submitAttempt" style="color: #ea6153; text-align:center">Please insert valid data</p>      
+        <ion-row style="margin-top:48px">
+            <button *ngIf="phoneNum == null || codeNum == null || emailText == null || username == null " ion-button block submit  disabled >تحقق</button>
+            <button *ngIf="phoneNum != null && codeNum != null && emailText != null " ion-button block submit (click)="signup(code.value, phone.value, email.value)"  >تحقق</button>            
+        </ion-row>
+    </ion-list>
+  </form>
+ <div id="recaptcha-container"></div>
+</ion-content>

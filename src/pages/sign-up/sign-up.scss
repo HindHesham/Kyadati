@@ -1,0 +1,84 @@
+page-sign-up {
+    ion-icon{
+        color:white
+    }
+    ion-header .toolbar-background {
+        background-image: url('../assets/pattern.svg');
+        background-repeat: repeat;
+        background-size: 30px;
+        background-color: #7E57C2;
+        color: white;
+    }
+    ion-title{
+        -webkit-text-fill-color:white;
+    }
+    ion-header{
+        height: 64px;
+    }
+    ion-navbar{
+        height: 100%;
+    }
+    .content-md{
+        background-color: #FBFBFB;
+        background-image: none;
+    }
+    .list-header{
+        margin-top:3%;
+        font-size: 16px;
+        font-weight: bold;
+        color: #37474F;
+        
+    }
+    .item h3, .item h4, .item h5, .item h6{
+        line-height: 20px;        
+    }
+    h5{
+        color: #37474F;
+        font-size: 14px;
+        padding-top:8px;
+        opacity: 0.64;
+    }
+    .item{
+        background-color: transparent
+    }
+    ion-input{
+        text-align: center;
+        
+    }
+    .text-input {
+        margin:0 auto;
+        text-align: center;
+        font-weight: bold;
+        font-size: 16px;        
+    }
+    .text-input::-moz-placeholder {
+        color: #B3B9BC;
+        
+      }
+      
+      .text-input:-ms-input-placeholder {
+        color: #B3B9BC;
+      
+      }
+      
+      .text-input::-webkit-input-placeholder {
+        text-indent: 0;
+        color: #B3B9BC;
+       
+      }
+    .item.item-block .item-inner{
+        padding: 0 
+    }
+    ion-col {
+        
+        &:first-of-type {
+            flex: 0 0 75%;            
+        }
+    }
+    .list-md .item-input{
+        border-bottom: 0;
+    }
+    .item-md{
+        padding-right: 0
+    }
+}

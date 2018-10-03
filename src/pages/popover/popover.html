@@ -1,0 +1,36 @@
+<!--
+  Generated template for the PopoverPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+<ion-content padding no-margin id="content" scroll="false" overflow-scroll="false" >
+  <ion-list>
+    <ion-row>
+        <ion-item no-lines>
+            <p id="title" >اكتب تعليقك </p>
+          </ion-item>
+    </ion-row>
+    <ion-row>
+      <ion-item id="textArea"no-lines>
+        <ion-textarea placeholder="اضف تعليقك" [(ngModel)]="comment">
+        </ion-textarea>
+      </ion-item>
+    </ion-row>
+    <ion-row> 
+      <ion-item no-lines>
+        <p id="titleRate" > تقييمك </p>
+        <rating class="ratingClass" no-padding no-mrgin [(ngModel)]="rate" readOnly="false" max="5" emptyStarIconName="star-outline" halfStarIconName="star-half" starIconName="star" nullable="false" (ngModelChange)="saveUserRating($event)"></rating>            
+      </ion-item>
+    </ion-row>
+    <ion-row>
+        <div style="margin-top:32px">
+            <button ion-button color="primary" (click)="addComment();">إضافة</button>          
+            <button ion-button outline color="black" id="cancelBtn" (click)="close();">إلغاء</button>
+          </div>
+    </ion-row>
+    
+  </ion-list>
+</ion-content>

@@ -1,0 +1,30 @@
+<ion-header no-border class="headerShadow">
+    <ion-navbar>
+      <ion-title>قيادتي</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+<ion-content padding class="outer-content" >
+    <form [formGroup]="userNameRegisterForm"> 
+      <ion-list >
+          <ion-list-header no-lines>
+              مرحباً! ما اسمك؟
+              <h5>يعرض الإسم فقط عند وضع تعليق او تقييم.</h5>
+          </ion-list-header>
+          <ion-row>
+            <ion-col>
+              <ion-item no-lines>
+                    <ion-input type="text" autofocus placeholder=" الإسم" #userName formControlName="usernameFormName" (input)="onSearchChange($event.target.value)"></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+          <p class="errorMsg" *ngIf="submitAttempt" style="color: #ea6153; text-align:center">User Name is Required</p>        
+          <ion-row style="margin-top:48px">
+              <button *ngIf="eventKey == null"  ion-button block submit disabled >متابعة</button>
+              <button *ngIf="eventKey != null"  ion-button block submit (click)="continue(userName.value)">متابعة</button>            
+          </ion-row>
+      </ion-list>
+    </form>
+   
+  </ion-content>

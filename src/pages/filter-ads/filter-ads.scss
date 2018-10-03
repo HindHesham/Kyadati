@@ -1,0 +1,55 @@
+page-filter-ads {
+    ion-icon{
+        color:white
+    }
+    ion-header .toolbar-background {
+        background-image: url('../assets/pattern.svg');
+        background-repeat: repeat;
+        background-size: 30px;
+        background-color: #7E57C2;
+        color: white;
+    }
+    ion-title{
+        -webkit-text-fill-color:white
+    }
+    ion-header{
+        height: 64px;
+    }
+    ion-navbar{
+        height: 100%;
+    }
+    ion-grid{
+        font-weight: bold;
+    }
+    #listRow{
+        background-color: white
+    }
+    ion-list{
+        width:100%;
+        font-weight: bold;
+        margin-bottom: 5%;
+    }
+  
+    .select .select-icon {
+        position: absolute;
+        width: 12px;
+        height: 19px;
+        left: 15px;
+        top:47px
+    }
+    #salleryMainDiv{
+        margin: 24px 0;
+        width:100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between
+    }
+    ion-footer{
+        height: 65px
+    }
+    .button{
+        width: 90%;
+        margin: 10px 5% 0 5%;
+    }
+     
+}

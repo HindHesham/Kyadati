@@ -1,0 +1,37 @@
+<!--
+  Generated template for the SignUpVerifyPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-border class="headerShadow">
+    <ion-navbar>
+      <ion-title>قيادتي</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="outer-content" >
+  <form [formGroup]="verifyForm"> 
+ 
+    <ion-list >
+        <ion-list-header no-lines>
+          لقد ارسلنا لك رمز تحقق عبر البريد الالكترونى
+          <h5> اذا لم تجد الرساله ف البريد الوارد تحقق من ال (spam) وأدخل الكود</h5>
+        </ion-list-header>
+        <ion-row id="inputsRow">
+            <ion-item>
+                <ion-input #verify autofocus placeholder=" رمز التحقق" formControlName="verifyInput" [(ngModel)]="input1" type="text"></ion-input>
+              </ion-item>
+        </ion-row>
+       
+        <ion-row style="margin-top:48px">
+            <button  *ngIf="input1 == null" ion-button block disabled >تأكيد</button>     
+            <button  *ngIf="input1 != null" ion-button block (click)="verifyCode()" >تأكيد</button>
+          </ion-row>
+    </ion-list>
+  </form>
+ 
+</ion-content>
+

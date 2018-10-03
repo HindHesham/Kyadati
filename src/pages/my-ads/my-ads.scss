@@ -1,0 +1,53 @@
+page-my-ads {
+    ion-icon{
+        color:white
+    }
+    ion-header .toolbar-background {
+        background-image: url('../assets/pattern.svg');
+        background-repeat: repeat;
+        background-size: 30px;
+        background-color: #7E57C2;
+        color: white;
+    }
+    ion-title{
+        -webkit-text-fill-color:white
+    }
+    ion-header{
+        height: 64px;
+    }
+    ion-navbar{
+        height: 100%;
+    }
+    #mainDiv{     
+        height: 240px;
+        width:100%;
+        background-color: white;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom:16px;
+        border: 2px solid #FFFFFF;
+        border-radius: 4px;
+    }
+    .graphicDiv, .graphicDiv img{
+        //border:1px solid blue;
+        height: 160px;
+        width: 100%
+    }
+    
+    .downloadBtn{
+        
+        display: flex;
+        position: fixed;
+        bottom: 5%;
+        width: 50%;
+        margin: 0 20%;
+        height: 40px;
+    }
+ 
+    .downloadBtn button{
+        width: 100%;
+        height: 40px;
+        font-size: large
+        
+    }
+}

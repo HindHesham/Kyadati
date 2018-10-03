@@ -1,0 +1,45 @@
+page-educational-content {
+    ion-header{
+        height: 107px;
+    }
+    ion-navbar{
+        margin-top: 20px;
+        
+    }
+    .list-ios{
+        margin: 0 0 32px;
+    }
+    .list-md{
+        margin: 14px 0 32px;
+    }
+    #mainDiv{     
+        height: 212px;
+        width:100%;
+        background-color: white;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom:3%;
+        border: 2px solid #FFFFFF;
+        border-radius: 4px;
+    }
+    #mainDiv video ,
+    .graphicDiv, .graphicDiv img{
+        //border:1px solid blue;
+        height: 166px;
+        width: 100%
+    }
+    video{
+        object-fit: cover;
+    }
+    #inphographicsName{
+        font-size: large;
+        height: 40px;
+        width: 100%;
+        border-top: 2px solid white
+        
+    }
+    #inphographicsName p
+    {
+        margin: 8px 22px 9px 0;
+    }
+}

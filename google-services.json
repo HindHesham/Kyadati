@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "205703043839",
+    "firebase_url": "https://kyadati-3029b.firebaseio.com",
+    "project_id": "kyadati-3029b",
+    "storage_bucket": "kyadati-3029b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:205703043839:android:a6c36a651cad7dd0",
+        "android_client_info": {
+          "package_name": "com.zodiacstudio.kyadati"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "205703043839-8ce236i6bvsacnmr9ishh7q601tgndhi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0aoiXhZvhc1Y2N7Pe487JL9Sytal_KJE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:205703043839:android:529a13120bcc3371",
+        "android_client_info": {
+          "package_name": "com.zodiacstudio.kyadati2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "205703043839-8ce236i6bvsacnmr9ishh7q601tgndhi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0aoiXhZvhc1Y2N7Pe487JL9Sytal_KJE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

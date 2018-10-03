@@ -1,0 +1,44 @@
+page-delete-popover {
+    .content{
+        background-image:none;
+        background-color: white;
+    }
+    //scroll
+    .scroll-content {
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        position: absolute;
+        z-index: 1;
+        display: block;
+        overflow-y: none;
+        -webkit-overflow-scrolling: touch;
+        will-change: scroll-position;
+    }
+   
+    ion-app.ios [padding]{
+        padding: 0;
+    }
+   
+    ion-app .ios [padding] .scroll-content{
+        padding: 0
+    }
+    .list-ios {
+        margin: -1px 0 0px;
+    }
+    #title{
+        font-size: medium;
+        font-weight: bold;
+        color:#37474F;
+        text-align: right
+    }
+    .button{
+        width: 40%;
+        font-weight: bold;
+    }
+    #cancelBtn{
+        color: #37474F;
+        border-color: rgba(55, 71, 79, .2);
+    }
+}

@@ -1,0 +1,85 @@
+<ion-header no-border class="headerShadow">
+    <ion-navbar >
+        
+        <ion-buttons end disable>
+            <button style="background:transparent">
+                
+            </button>
+        </ion-buttons>
+     
+      <ion-row id="schoolLogoRow">
+        <div class="logoSchool">
+          <img *ngIf="maintenanceCenterObj.image" src="http://car.zodiacstudio.net{{maintenanceCenterObj.image}}" />
+          <img *ngIf="!maintenanceCenterObj.image" src="assets/imgs/avatar.png" />
+        </div>
+      </ion-row>
+      
+      <div style="text-align:center">
+       <p id="schoolName" > {{maintenanceCenterObj.title}} </p>
+       <rating class="ratingClass" no-padding no-mrgin [(ngModel)]="maintenanceCenterObj.rate" readOnly="false" max="5" emptyStarIconName="star-outline" halfStarIconName="star-half" starIconName="star" nullable="false" (ngModelChange)="saveUserRating($event)"></rating>
+       <p id="schoolCountry"> {{maintenanceCenterObj.city_name}}, {{maintenanceCenterObj.area}} </p>
+      </div> 
+    </ion-navbar>
+     
+</ion-header>
+
+<ion-content padding>
+  
+  <ion-list>
+    <ion-row id="iconRow" class="shadowAndRadius" >
+        <ion-col (click)="gotoMap()">
+            <ion-buttons class="iconContaine">
+                <button ion-button icon-only clear>
+                  <custom-icon set="evil" name="map" ></custom-icon>
+                </button>
+            </ion-buttons>
+            الخريطه
+          
+        </ion-col>
+        <ion-col (click)="phoneCall()">
+            <ion-buttons class="iconContaine">
+                <button ion-button icon-only clear>
+                  <custom-icon set="evil" name="call" ></custom-icon>
+                </button>
+              </ion-buttons>
+              إتصال
+              
+        </ion-col>
+        <ion-col (click)="presentPopover()">
+            <ion-buttons class="iconContaine">
+                <button ion-button icon-only clear>
+                  <custom-icon set="evil" name="comment" ></custom-icon>
+                </button>
+              </ion-buttons>
+              إضافة تعليق
+        </ion-col>
+    </ion-row>
+
+      <ion-row class="rowShadow" >
+        <p>
+          {{ maintenanceCenterObj.description}}
+        </p>
+      </ion-row>
+    
+      <h5 style="font-weight:bold">
+        التعليقات
+      </h5>
+
+      <ion-row class="rowShadow" id="commentRow" *ngFor="let comment of getAllComments()">
+        <div id="usernameDiv" *ngIf="comment.user_name">
+          <p id="userNameForComment">
+              {{comment.user_name}}
+          </p>
+          <rating class="ratingClass" no-padding no-mrgin [(ngModel)]="comment.rate" readOnly="false" max="5" emptyStarIconName="star-outline" halfStarIconName="star-half" starIconName="star" nullable="false" (ngModelChange)="saveUserRating($event)"></rating>            
+        </div>
+        <div *ngIf="comment.user_name">
+            <p >
+                {{comment.comment}}
+            </p>
+        </div>
+        
+      </ion-row >
+    
+  </ion-list>
+
+</ion-content>

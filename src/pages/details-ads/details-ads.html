@@ -1,0 +1,126 @@
+<ion-header no-border class="headerShadow">
+    
+      <ion-navbar>
+        <ion-title > {{ adDescriptionObj.title }} </ion-title>
+
+        <ion-buttons *ngIf="pageType === 'my_ads'" end style="margin:0 12px" >
+            <button (click)="delete( adDescriptionObj.id)" style="background:transparent">
+                <ion-icon name="ios-trash-outline" color="white" id="deleteIcon"></ion-icon>
+            </button>
+        </ion-buttons>
+
+      </ion-navbar>
+  </ion-header>
+
+<ion-content>
+  <ion-grid>
+
+      <ion-row>
+      
+          <ion-col *ngIf="adDescriptionObj.status === 1 && adDescriptionObj.user_id === userId" class="adStatusColGreen"> 
+            <p><ion-icon name="checkmark-circle"></ion-icon> الاعلان منشور </p>
+          </ion-col> 
+
+         <ion-col *ngIf="adDescriptionObj.status === 0 && adDescriptionObj.user_id === userId" class="adStatusColRed">
+            <p><ion-icon name="alert"></ion-icon> في انتظار موافقة الأدمن لنشر الاعلان </p>
+         </ion-col>
+
+      </ion-row>
+
+    <ion-row id="slideRow">
+
+        <ion-slides spaceBetween="5" slidesPerView='auto' centeredSlides="true">
+          <ion-slide *ngIf="adDescriptionObj.first_image !== null ">
+            <img src="http://car.zodiacstudio.net\/{{adDescriptionObj.first_image}}">
+          </ion-slide>
+
+          <ion-slide *ngIf="adDescriptionObj.second_image !== null ">
+            <img src="http://car.zodiacstudio.net\/{{adDescriptionObj.second_image}}">              
+          </ion-slide>
+
+          <ion-slide *ngIf="adDescriptionObj.third_image !== null ">
+            <img src="http://car.zodiacstudio.net\/{{adDescriptionObj.third_image}}">              
+          </ion-slide>
+
+          <ion-slide *ngIf="adDescriptionObj.forth_image !== null ">
+            <img src="http://car.zodiacstudio.net\/{{adDescriptionObj.forth_image}}">              
+          </ion-slide>
+
+          <ion-slide *ngIf="adDescriptionObj.fifth_image !== null ">
+            <img src="http://car.zodiacstudio.net\/{{adDescriptionObj.fifth_image}}">              
+          </ion-slide>
+
+        </ion-slides>
+    </ion-row>
+
+    <ion-row id="secondRow">
+      <ion-col no-padding>
+        <div id="mainDiv1" class="shadowAndRadius">
+          <div class="detailsTitleDiv">
+            <p>
+                الموديل 
+            </p>
+            
+          </div>
+          <div class="typeSalleryDetailsDiv">
+            <p class="name"> {{ adDescriptionObj.type }}</p>
+            <!--<p class="sallery">3000 سي سي</p>-->
+          </div>
+        </div>
+      </ion-col>
+      <ion-col no-padding>
+          <div id="mainDiv2" class="shadowAndRadius" >
+              <div class="detailsTitleDiv">
+                <p>
+                    السعر 
+                </p>
+                
+              </div>
+              <div class="typeSalleryDetailsDiv">
+                <p class="name">{{ adDescriptionObj.price }} </p>
+                <p class="sallery">ريال سعودي</p>
+              </div>
+            </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-list id="thirdRow" class="shadowAndRadius">
+      <ion-list-header id="title" no-lines >
+          تفاصيل السيارة
+      </ion-list-header>
+      <ion-row class="detailsRow">
+        <ion-col>
+          <ion-label >سنة الصنع</ion-label>
+          <p>{{ adDescriptionObj.production_year }} </p>
+        </ion-col>
+        <ion-col>
+            <ion-label >سعة المحرك</ion-label>
+            <p> {{ adDescriptionObj.engine }} </p>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="detailsRow">
+          <ion-col>
+            <ion-label > الأميال المقطوعة</ion-label>
+            <p>{{ adDescriptionObj.kilometres }}</p>
+          </ion-col>
+          <ion-col>
+              <ion-label > نوع الوقود</ion-label>
+              <p>{{ adDescriptionObj.fuel }} </p>
+          </ion-col>
+         
+          
+        </ion-row>
+      
+        
+    </ion-list>
+  </ion-grid>
+  <ion-fab  bottom right edge >
+      <button ion-fab (click)="phoneCall()"><ion-icon name="call"></ion-icon></button>
+  </ion-fab>
+</ion-content>
+<ion-footer no-border>
+  <ion-toolbar no-lines>
+
+  </ion-toolbar>
+</ion-footer>

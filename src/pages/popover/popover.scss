@@ -1,0 +1,66 @@
+page-popover {
+    .content{
+        background-image: none;
+    }
+    .popover-content {
+        border-radius: 10px;
+        color: #000;
+        background: #fff;
+        width: 90%;
+       
+    }
+    .scroll-content{
+        overflow-y: hidden;
+        overflow: hidden;
+
+    }
+
+    /*
+    .popover-ios .popover-content,
+    .popover-md .popover-content{
+        width: 90%;
+        top: 197px;
+        right: 5%;
+        left: 5%;
+    }*/
+    
+    //scroll
+
+    ion-app.ios [padding]{
+        padding: 0;
+    }
+   
+    .list-ios {
+        margin: -1px 0 0px;
+    }
+    #title{
+        font-size: medium;
+        font-weight: bold;
+        color:#37474F;
+        text-align: right
+    }
+    #titleRate{
+        font-size: medium;
+        font-weight: bold;
+        color:#37474F;
+        margin-bottom: 16px;
+        margin-top:4px;
+    }
+    #textArea{
+        padding-right: 16px;
+        border:1px solid rgba(55, 71, 79, .2);
+       // width:270px;
+       // height:120px;
+    }
+    .text-input{
+        height: 95%
+    }
+    .button{
+        width: 40%;
+        font-weight: bold;
+    }
+    #cancelBtn{
+        color: #37474F;
+        border-color: rgba(55, 71, 79, .2);
+    }
+}

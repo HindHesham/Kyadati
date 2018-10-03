@@ -1,0 +1,116 @@
+page-insurance-companies-details {
+
+    ion-header{
+        height: 169px;
+       
+    }
+    ion-navbar{
+        height: 100%;
+        -webkit-text-fill-color: white
+    }
+    .toolbar-background {
+        background-image: url('../assets/pattern.svg');
+        background-repeat: repeat;
+        background-size: 30px;
+        background-color: #7E57C2;
+        color: white;
+    }
+     ion-icon{
+         color: #7E57C2
+     }
+     /*
+     .list-ios{
+        margin: 0 0 32px;
+    }
+    .list-md{
+        margin: 14px 0 32px;
+    }*/
+     #iconRow{
+        height: 83px;
+        background-color: white;
+        color:#7E57C2;
+        font-weight: bold;
+        margin:0px 0 16px 0;
+        
+    }
+    custom-icon{
+        font-size: small
+    }
+    ion-col{
+        text-align: center
+    }
+    ion-buttons{
+        padding: 4px 4px 0 4px;
+    }
+    .button{
+        margin: 0 auto;
+    }
+    
+    
+    h5{
+        color: #37474F;
+        font-weight: bold;
+    }
+   
+    #boxRow{
+        height: 158px; 
+    }
+    #boxRow ion-col{
+       
+        background-color: white;
+        padding: 0;
+    }
+    .titleBoxRow{
+        height: 35%;
+        border-bottom: 1px solid rgba(214, 214, 214, .5);
+        text-align: center;
+        font-size: medium;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:center;
+    }
+    .titleBoxRow p{
+        margin: 0;
+        position: relative;
+        //top: 25%;
+    }
+    .detailsBoxRow{
+        height: 65%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:center;
+       
+    }
+    .detailsBoxRow p{
+        margin: 0;
+    }
+    .sallery{
+        font-weight: bold;
+        font-size: 36px;
+    }
+    .name{
+        font-size: small;
+        color: #879195;
+        font-weight: normal;
+    }
+    #commentRow p{
+        padding: 0 16px;
+        
+        font-size: small
+    }
+    
+    #secondRow p{
+        padding: 0 16px;
+    }
+    #commentRow{
+        display: flex;
+        flex-wrap: wrap;
+        //justify-content: space-between;
+        flex-direction: column;
+    }
+}
+
